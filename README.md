@@ -1,2 +1,3 @@
 # 42
-projets 42 en cours  (non push)
+Projets que je suis en train de faire
+(voir la version finale push sur 42cursus)
