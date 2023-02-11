@@ -6,7 +6,7 @@
 #    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/09 13:24:03 by smlamali          #+#    #+#              #
-#    Updated: 2023/02/09 13:33:25 by smlamali         ###   ########.fr        #
+#    Updated: 2023/02/11 17:28:21 by smlamali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ all: $(NAME)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CC) $(OBJS) -lX11 -lXext -Lminilibx-linux -lmlx -o $(NAME) 
+	$(CC) $(OBJS) -lX11 -lXext -Lminilibx-linux -lmlx -Llibft -lft -o $(NAME) 
 
 clean: 
 	rm -f ${OBJS}

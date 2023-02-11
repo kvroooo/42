@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:23:51 by smlamali          #+#    #+#             */
-/*   Updated: 2023/02/09 13:23:53 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/02/11 16:06:08 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <fcntl.h>
 # include "minilibx-linux/mlx.h"
 # include "getnextline/get_next_line.h"
+# include "libft/libft.h"
 # define MAXSIZE 18446744013709551615UL
 
 //parsing

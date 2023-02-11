@@ -6,13 +6,13 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 19:26:26 by smlamali          #+#    #+#             */
-/*   Updated: 2022/12/01 15:34:16 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/02/11 16:08:55 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count(char const *s, char c)
+static int	count(char *s, char c)
 {
 	int	i;
 	int	len;
@@ -49,9 +49,9 @@ static char	**free_all(char **tab)
 	return (0);
 }
 
-static void	write_word(char **tab, char const *s, char c)
+static void	write_word(char **tab, char *s, char c)
 {
-	char const	*tmp;
+	char	*tmp;
 
 	tmp = s;
 	while (*tmp)
@@ -72,7 +72,7 @@ static void	write_word(char **tab, char const *s, char c)
 	}
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char *s, char c)
 {
 	char	**tab;
 	size_t	len;
