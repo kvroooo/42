@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:23:51 by smlamali          #+#    #+#             */
-/*   Updated: 2023/03/03 15:15:11 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/03/04 15:35:11 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@
 # define MAXSIZE 18446744013709551615UL
 
 //parsing + check
-char	*get_all(char *all, int lines, int column, char *argv);
-int		ft_parse(char *map, int lines);
+char	**ft_parse(int lines, int column, int fd, char **map);
 int		verif_wall(char *map, int lines);
 int		verif_exit(char *map);
 int		verif_item(char *map);
