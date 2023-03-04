@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:23:51 by smlamali          #+#    #+#             */
-/*   Updated: 2023/03/04 15:35:11 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/03/04 16:06:42 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@
 
 //parsing + check
 char	**ft_parse(int lines, int column, int fd, char **map);
-int		verif_wall(char *map, int lines);
-int		verif_exit(char *map);
-int		verif_item(char *map);
+// int		verif_wall(char *map, int lines);
+// int		verif_exit(char *map);
+// int		verif_item(char *map);
 
 // utils
 void	ft_strkcpy(char *dst, const char *src, size_t size);
