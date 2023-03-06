@@ -1,14 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checkmap.c                                         :+:      :+:    :+:   */
+/*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:55:17 by smlamali          #+#    #+#             */
-/*   Updated: 2023/03/04 15:56:36 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/03/06 16:32:00 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
+void	ft_check(char **map, int lines, int collumn)
+{
+	if (ft_walls(map, collumn, lines))
+		printf("Error : No wall :/\n");
+}

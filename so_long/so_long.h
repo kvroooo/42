@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:23:51 by smlamali          #+#    #+#             */
-/*   Updated: 2023/03/04 16:06:42 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/03/06 15:59:22 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,16 @@
 # include "getnextline/get_next_line.h"
 # define MAXSIZE 18446744013709551615UL
 
-//parsing + check
+//PARSING & UTILS
 char	**ft_parse(int lines, int column, int fd, char **map);
-// int		verif_wall(char *map, int lines);
-// int		verif_exit(char *map);
-// int		verif_item(char *map);
-
-// utils
+char	**lcolumn_to_zero(char **map, int lines, int column);
 void	ft_strkcpy(char *dst, const char *src, size_t size);
 int		ft_strlen(char *norminette);
+int		ft_lines(char **map);
+int		ft_column(char **map, int lines);
+
+//CHECK_MAP & UTILS
+void	ft_check(char **map, int lines, int collumn);
+int		ft_walls(char **map, int lines, int collumn);
 
 #endif
