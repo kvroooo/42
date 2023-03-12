@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:23:51 by smlamali          #+#    #+#             */
-/*   Updated: 2023/03/06 15:59:22 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/03/11 17:10:21 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,16 @@
 
 //PARSING & UTILS
 char	**ft_parse(int lines, int column, int fd, char **map);
-char	**lcolumn_to_zero(char **map, int lines, int column);
+char	**ft_zero(char **map, int column, int lines);
 void	ft_strkcpy(char *dst, const char *src, size_t size);
 int		ft_strlen(char *norminette);
 int		ft_lines(char **map);
-int		ft_column(char **map, int lines);
+int		ft_column(char **map);
 
 //CHECK_MAP & UTILS
 void	ft_check(char **map, int lines, int collumn);
 int		ft_walls(char **map, int lines, int collumn);
+int		ft_search(char **map, int lines, int collumn, char caracter);
+int		ft_contain(char **map, int lines, int collumn);
 
 #endif

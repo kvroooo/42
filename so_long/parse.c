@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:23:55 by smlamali          #+#    #+#             */
-/*   Updated: 2023/03/06 16:51:55 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/03/11 16:19:18 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ char	**ft_parse(int lines, int column, int fd, char **map)
 	char	*all;
 
 	i = 0;
-	all = "";
 	tmp = get_next_line(fd);
 	if (tmp == NULL)
 		return (NULL);
@@ -44,10 +43,10 @@ char	**ft_parse(int lines, int column, int fd, char **map)
 	while (i < lines)
 	{
 		map[i] = malloc(sizeof(char *) * column);
-		ft_strkcpy(map[i], all + (column * i) + i, column + 1);
+		ft_strkcpy(map[i], all + (column * i) + i, column);
 		i++;
 	}
-	printf("lol y'en a %d\n", lines);
+	map = ft_zero(map, column, lines);
 	return (map);
 }
 
@@ -65,9 +64,9 @@ int	main(int agrc, char *argv[])
 		return (printf("Error : retry with a map this time c;"));
 	map = ft_parse(lines, column, fd, map);
 	if (map == NULL)
-		return (printf("Error : No map :/ \n"));
+		return (printf("Error : something wrong with the mao :S\n"));
+	column = ft_column(map);
 	lines = ft_lines(map);
-	printf("et apres ft_lines %d + segfault ^^'\n", lines);
-	column = ft_column(map, lines);
+	printf("%d lignes \n%d colonnes\n", lines, column);
 	ft_check(map, lines, column);
 }
